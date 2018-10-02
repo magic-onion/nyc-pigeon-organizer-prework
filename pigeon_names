@@ -1,0 +1,30 @@
+
+[1mFrom:[0m /home/magic-onion/nyc-pigeon-organizer-prework/nyc_pigeon_organizer.rb @ line 28 Object#nyc_pigeon_organizer:
+
+    [1;34m21[0m: [32mdef[0m [1;34mnyc_pigeon_organizer[0m(data)
+    [1;34m22[0m:   new_hash = {}
+    [1;34m23[0m:   [1;34m#create an array of unique names[0m
+    [1;34m24[0m:   pigeon_names = data.collect [32mdo[0m |key, value|
+    [1;34m25[0m:       value.values 
+    [1;34m26[0m:     [32mend[0m
+    [1;34m27[0m:     pigeon_names.flatten.uniq
+ => [1;34m28[0m:  binding.pry
+    [1;34m29[0m:   pigeon_names.each {|name| new_hash[name] = {}}
+    [1;34m30[0m: 
+    [1;34m31[0m:   data.each [32mdo[0m |key, value|
+    [1;34m32[0m:     new_hash.each [32mdo[0m |name, hash|
+    [1;34m33[0m:       new_hash[name][key] = []
+    [1;34m34[0m:     [32mend[0m
+    [1;34m35[0m:   [32mend[0m
+    [1;34m36[0m:   
+    [1;34m37[0m:   data.each [32mdo[0m |key, value|
+    [1;34m38[0m:     value.each [32mdo[0m |category, array|
+    [1;34m39[0m:       array.each [32mdo[0m |name|
+    [1;34m40[0m:        new_hash[name][key] << category.to_S
+    [1;34m41[0m:      [32mend[0m
+    [1;34m42[0m:    [32mend[0m 
+    [1;34m43[0m:  [32mend[0m
+    [1;34m44[0m:     [1;34m#return the newly built hash[0m
+    [1;34m45[0m:   new_hash
+    [1;34m46[0m: [32mend[0m
+

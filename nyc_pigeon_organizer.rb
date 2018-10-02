@@ -26,20 +26,18 @@ def nyc_pigeon_organizer(data)
     end
     pigeon_names.flatten.uniq
  
-  pigeon_names.each do |name|
-    pigeon_list[name] = {}
-  end
+  pigeon_names.each {|name| new_hash[name] = {}}
   
   data.each do |key, value|
-    pigeon_list.each do |name, hash|
-      pigeon_list[name][key] = []
+    new_hash.each do |name, hash|
+      new_hash[name][key] = []
     end
   end
   
   data.each do |key, value|
     value.each do |category, array|
       array.each do |name|
-       pigeon_list[name][key] << category.to_S
+       new_hash[name][key] << category.to_S
      end
    end 
  end

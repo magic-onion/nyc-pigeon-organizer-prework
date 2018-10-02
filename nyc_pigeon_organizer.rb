@@ -28,7 +28,7 @@ def nyc_pigeon_organizer(data)
   pigeon_names.flatten.uniq
  
   pigeon_names.each do |name|
-    pigeon_names[name] = {}
+    pigeon_list[name] = {}
   end
   
   data.each do |key, value|

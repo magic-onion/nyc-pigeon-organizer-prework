@@ -19,21 +19,22 @@ pigeon_data = {
 }
 
 def nyc_pigeon_organizer(data)
-  new_hash = {}
-  #create an array of unique names
-  pigeon_names = data.collect do |key, value|
-      key.values 
-    end
-   flatten.uniq
- 
-  pigeon_names.each {|name| new_hash[name] = {}}
+    new_hash = {}
+   # Get array of unique names
+  pigeon_names = data.collect do |attributes, details|
+    details.values
+  end
+  .flatten.uniq
   
-   data.each do |attributes, details|
+  pigeon_names.each {|name| new_hash[name] = {}}
+
+  data.each do |attributes, details|
     new_hash.each do |name, hash|
       new_hash[name][attributes] = []
     end
   end
-   # Assign info to each key
+
+
   data.each do |attribute, details|
     details.each do |property, names|
       names.each do |name|

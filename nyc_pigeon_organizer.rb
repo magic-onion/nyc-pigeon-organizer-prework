@@ -19,7 +19,7 @@ pigeon_data = {
 }
 
 def nyc_pigeon_organizer(data)
-  pigeon_list = {}
+  new_hash = {}
   #create an array of unique names
   pigeon_names = []
     data.each do |key, value|
@@ -45,5 +45,5 @@ def nyc_pigeon_organizer(data)
    end 
  end
     #return the newly built hash
-  pigeon_list
+  new_hash
 end

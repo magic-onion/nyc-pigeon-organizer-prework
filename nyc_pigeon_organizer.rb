@@ -22,11 +22,14 @@ def nyc_pigeon_organizer(data)
   pigeon_list = {}
   #create an array of unique names
   pigeon_names = []
-    pigeon_data.each do |attribute, details|
+    data.each do |key, value|
       pigeon_names << value.values
     end
   pigeon_names.flatten.uniq
  
+  pigeon_names.each do |name|
+    new_hash[name] = {}
+  end
   
   
   

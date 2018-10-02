@@ -25,7 +25,7 @@ def nyc_pigeon_organizer(data)
       value.values 
     end
     pigeon_names.flatten.uniq
- binding.pry
+
   pigeon_names.each {|name| new_hash[name] = {}}
   
   data.each do |key, value|

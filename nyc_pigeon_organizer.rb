@@ -37,7 +37,7 @@ def nyc_pigeon_organizer(data)
   data.each do |key, value|
     value.each do |category, array|
       array.each do |name|
-       new_hash[name][key] << category.to_S
+       new_hash[name][key] << category.to_s
      end
    end 
  end

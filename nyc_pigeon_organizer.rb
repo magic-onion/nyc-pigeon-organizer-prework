@@ -22,7 +22,7 @@ def nyc_pigeon_organizer(data)
   pigeon_list = {}
   #create an array of unique names
   pigeon_names = []
-    data.collext.do |key, value|
+    data.each.do |key, value|
       pigeon_names << value.values
       pigeon_names.flatten.uniq
     end

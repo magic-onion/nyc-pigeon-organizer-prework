@@ -28,19 +28,18 @@ def nyc_pigeon_organizer(data)
  
   pigeon_names.each {|name| new_hash[name] = {}}
   
-  data.each do |key, value|
+   data.each do |attributes, details|
     new_hash.each do |name, hash|
-      new_hash[name][key] = []
+      new_hash[name][attributes] = []
     end
   end
-  
-  data.each do |key, value|
-    value.each do |category, array|
-      array.each do |name|
-       new_hash[name][key] << category.to_S
-     end
-   end 
- end
-    #return the newly built hash
+   # Assign info to each key
+  data.each do |attribute, details|
+    details.each do |property, names|
+      names.each do |name|
+        new_hash[name][attribute] << property.to_s
+      end
+    end
+  end
   new_hash
 end

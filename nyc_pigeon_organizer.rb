@@ -19,6 +19,17 @@ pigeon_data = {
 
 def nyc_pigeon_organizer(data)
   pigeon_list = {}
+  #create an array of unique names
+  pigeon_names = []
+    data.collext.do |key, value|
+      pigeon_names << value.values
+      pigeon_names.flatten.uniq
+    end
+  pigeon_names
+  binding.pry
   
+  
+  
+    #return the newly built hash
   pigeon_list
 end

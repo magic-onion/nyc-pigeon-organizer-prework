@@ -27,6 +27,7 @@ def nyc_pigeon_organizer(data)
       pigeon_names.flatten.uniq
     end
   pigeon_names
+ 
   binding.pry
   
   

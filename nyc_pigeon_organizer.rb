@@ -24,9 +24,8 @@ def nyc_pigeon_organizer(data)
   pigeon_names = []
     pigeon_data.each do |attribute, details|
       pigeon_names << value.values
-      pigeon_names.flatten.uniq
     end
-  pigeon_names
+  pigeon_names.flatten.uniq
  
   
   
